@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La Papita de Leche Take Away: comida venezolana sin gluten en València</title>
+  <meta name="description" content="Empanadas, arepas, tequeños y churros con chocolate sin gluten. Para llevar, a domicilio o para comer allí en Av. de María Cristina, 9, València. Pide al 632 12 54 81.">
+  <!-- Borrador: que Google no la muestre todavía. Borra esta línea cuando el local la apruebe. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F5C342">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='17' rx='14' ry='10' fill='%23E3982F'/%3E%3Cellipse cx='16' cy='14' rx='13' ry='8' fill='%23F5C342'/%3E%3C/svg%3E">
+  <link rel="preload" href="fuentes/bagel-fat-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#carta" data-t="saltar">Saltar al contenido</a>
+
+  <!-- FRANJA DE DEMO: borra la línea de abajo para quitarla. -->
+  <p class="franja-demo" lang="es">Borrador de demostración · pendiente de revisión por el local</p>
+
+  <header class="barra">
+    <a class="barra-marca" href="#portada" data-d="nombre" translate="no">La Papita de Leche</a>
+    <nav class="barra-nav" aria-label="Secciones" data-t-aria="navegacion">
+      <ul>
+        <li><a href="#carta" data-t="navCarta">Carta</a></li>
+        <li><a href="#horario" data-t="navHorario">Horario</a></li>
+        <li><a href="#ubicacion" data-t="navUbicacion">Ubicación</a></li>
+        <li><a href="#contacto" data-t="navContacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="idiomas" role="group" aria-label="Idioma" data-t-aria="idioma">
+      <button type="button" lang="es" data-idioma="es" aria-pressed="true">Español</button>
+      <button type="button" lang="en" data-idioma="en" aria-pressed="false">English</button>
+    </div>
+    <a class="boton boton-llamar barra-llamar" href="tel:+34632125481" data-d="tel">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2 9 3l1.6 4.2-2 1.4a12 12 0 0 0 6.8 6.8l1.4-2 4.2 1.6-.2 2.4a2.6 2.6 0 0 1-2.8 2.3A17.5 17.5 0 0 1 4.3 6 2.6 2.6 0 0 1 6.6 3.2z"/></svg>
+      <span data-t="llamar">Llamar</span>
+    </a>
+  </header>
+
+  <!-- Aquí va la escena 3D. Se carga cuando el resto de la página ya está lista. -->
+  <div class="lienzo" id="lienzo" aria-hidden="true"></div>
+
+  <main id="contenido">
+    <section class="portada" id="portada" aria-labelledby="nombre">
+      <div class="portada-texto">
+        <h1 class="nombre" id="nombre" translate="no">
+          <span class="nombre-linea">La Papita</span>
+          <span class="nombre-linea">de Leche</span>
+          <span class="pegatina">Take Away</span>
+        </h1>
+        <p class="tipo" data-d="tipo">Comida venezolana sin gluten</p>
+
+        <p class="estado" id="estado" data-abierto="">
+          <span class="estado-punto" aria-hidden="true"></span>
+          <span class="estado-texto"><strong id="estado-titulo"></strong> <span id="estado-detalle"></span></span>
+        </p>
+
+        <div class="portada-acciones">
+          <a class="boton boton-llamar portada-llamar" href="tel:+34632125481" data-d="tel">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2 9 3l1.6 4.2-2 1.4a12 12 0 0 0 6.8 6.8l1.4-2 4.2 1.6-.2 2.4a2.6 2.6 0 0 1-2.8 2.3A17.5 17.5 0 0 1 4.3 6 2.6 2.6 0 0 1 6.6 3.2z"/></svg>
+            <span><span data-t="llamarAl">Llamar al</span> <span data-d="telefono">632 12 54 81</span></span>
+          </a>
+          <a class="boton boton-borde" href="#carta" data-t="verCarta">Ver la carta</a>
+        </div>
+        <p class="valoracion">
+          <svg class="icono icono-estrella" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17l-5.7 3.1 1.2-6.3-4.6-4.4 6.3-.8z"/></svg>
+          <a id="valoracion" href="https://maps.app.goo.gl/vfKrPSUcbeAMBxzp6" data-d="mapa"></a>
+        </p>
+
+
+      </div>
+
+      <!-- El dibujo fijo se ve siempre al principio; si el móvil puede, lo sustituye la escena 3D. -->
+      <div class="escenario" id="escenario" role="img" aria-label="Ilustración de una arepa rellena, una empanada y una taza de chocolate con churros" data-t-aria="ilustracion">
+        <svg class="escena-fija" viewBox="0 0 460 340" aria-hidden="true" focusable="false">
+          <!-- sombras -->
+          <ellipse cx="98" cy="300" rx="80" ry="12" fill="#2A1621" opacity=".14"/>
+          <ellipse cx="236" cy="290" rx="126" ry="16" fill="#2A1621" opacity=".16"/>
+          <ellipse cx="380" cy="300" rx="62" ry="11" fill="#2A1621" opacity=".14"/>
+          <!-- empanada -->
+          <g transform="translate(98 268) rotate(-8)">
+            <path d="M-78 10 C-70 -64 70 -64 78 10 Q0 26 -78 10Z" fill="#E39B2D"/>
+            <path d="M-70 4 C-60 -54 60 -54 70 4 Q0 14 -70 4Z" fill="#EDB04A"/>
+            <g fill="#C97C22">
+              <circle cx="-66" cy="-12" r="7"/><circle cx="-56" cy="-30" r="7"/><circle cx="-41" cy="-43" r="7"/><circle cx="-22" cy="-51" r="7"/><circle cx="0" cy="-54" r="7"/><circle cx="22" cy="-51" r="7"/><circle cx="41" cy="-43" r="7"/><circle cx="56" cy="-30" r="7"/><circle cx="66" cy="-12" r="7"/>
+            </g>
+            <g fill="#C97C22" opacity=".55"><circle cx="-20" cy="-14" r="3"/><circle cx="14" cy="-22" r="2.5"/><circle cx="30" cy="-6" r="3"/></g>
+          </g>
+          <!-- arepa: base con relleno -->
+          <g transform="translate(236 236)">
+            <ellipse cx="0" cy="18" rx="124" ry="40" fill="#D98F2B"/>
+            <ellipse cx="0" cy="6" rx="120" ry="36" fill="#F7E6B5"/>
+            <g>
+              <path d="M-78 4c18-10 40-12 56-4" stroke="#7A3B1C" stroke-width="12" stroke-linecap="round" fill="none"/>
+              <path d="M-30 14c20-8 44-8 62 0" stroke="#8B4724" stroke-width="11" stroke-linecap="round" fill="none"/>
+              <path d="M20 -4c18-6 36-4 52 6" stroke="#7A3B1C" stroke-width="12" stroke-linecap="round" fill="none"/>
+              <rect x="-56" y="-10" width="46" height="14" rx="7" fill="#EBA43B" transform="rotate(-10 -33 -3)"/>
+              <rect x="40" y="10" width="44" height="13" rx="6.5" fill="#EBA43B" transform="rotate(8 62 16)"/>
+              <g fill="#2A1621"><circle cx="-8" cy="-6" r="5"/><circle cx="4" cy="-2" r="5"/><circle cx="-14" cy="4" r="5"/><circle cx="84" cy="-2" r="5"/><circle cx="-90" cy="10" r="5"/></g>
+              <g fill="#FFFDF6"><rect x="-4" y="12" width="15" height="13" rx="3"/><rect x="58" y="-12" width="14" height="13" rx="3" transform="rotate(12 65 -5)"/><rect x="-70" y="16" width="14" height="12" rx="3"/></g>
+            </g>
+          </g>
+          <!-- arepa: tapa abierta -->
+          <g transform="translate(228 168) rotate(-9)">
+            <ellipse cx="0" cy="8" rx="118" ry="34" fill="#F7E6B5"/>
+            <ellipse cx="0" cy="-4" rx="118" ry="36" fill="#E9A63C"/>
+            <ellipse cx="0" cy="-10" rx="110" ry="30" fill="#F5C352"/>
+            <g fill="#C97C22" opacity=".6"><circle cx="-50" cy="-14" r="6"/><circle cx="-14" cy="-24" r="4"/><circle cx="30" cy="-8" r="7"/><circle cx="66" cy="-20" r="4.5"/><circle cx="-80" cy="-2" r="3.5"/><circle cx="8" cy="0" r="3"/></g>
+          </g>
+          <!-- taza con churros -->
+          <g transform="translate(380 236)">
+            <path d="M-26 -78 l18 -70" stroke="#C9772B" stroke-width="20" stroke-linecap="round"/>
+            <path d="M-26 -78 l18 -70" stroke="#E3A04A" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 9"/>
+            <path d="M18 -76 l-4 -78" stroke="#C9772B" stroke-width="20" stroke-linecap="round"/>
+            <path d="M18 -76 l-4 -78" stroke="#E3A04A" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 9"/>
+            <path d="M48 -40 a26 26 0 0 1 0 52" stroke="#FFF6E5" stroke-width="13" fill="none" stroke-linecap="round"/>
+            <path d="M-54 -66 L-46 46 Q0 66 46 46 L54 -66Z" fill="#FFF6E5"/>
+            <ellipse cx="0" cy="-66" rx="54" ry="15" fill="#C8321F"/>
+            <ellipse cx="0" cy="-64" rx="47" ry="11" fill="#4A2414"/>
+            <path d="M-26 -66 l8 -22" stroke="#C9772B" stroke-width="20" stroke-linecap="round"/>
+            <path d="M18 -64 l-1 -20" stroke="#C9772B" stroke-width="20" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="carta" id="carta" aria-labelledby="titulo-carta" tabindex="-1">
+      <span class="miga miga-1" data-profundidad="0.18" aria-hidden="true"></span>
+      <span class="miga miga-2" data-profundidad="-0.12" aria-hidden="true"></span>
+      <span class="miga miga-3" data-profundidad="0.28" aria-hidden="true"></span>
+      <div class="envoltorio">
+        <div class="carta-cabeza">
+          <h2 class="titulo" id="titulo-carta" data-t="tituloCarta">Carta</h2>
+          <p class="sello" data-d="lema">Aquí todo es sin gluten</p>
+        </div>
+        <p class="carta-ademas" id="carta-ademas"></p>
+        <nav class="grupos" aria-label="Ir a una parte de la carta" data-t-aria="gruposCarta">
+          <ul id="grupos"></ul>
+        </nav>
+        <div class="rejilla-carta" id="rejilla-carta"></div>
+      </div>
+    </section>
+
+    <div class="info">
+      <span class="miga miga-4" data-profundidad="0.2" aria-hidden="true"></span>
+      <div class="envoltorio info-rejilla">
+        <section class="bloque" id="horario" aria-labelledby="titulo-horario">
+          <h2 class="titulo" id="titulo-horario" data-t="tituloHorario">Horario</h2>
+          <table class="horario">
+            <caption class="solo-lectores" data-t="tituloHorario">Horario</caption>
+            <tbody id="horario-filas"></tbody>
+          </table>
+          <p class="nota" data-t="horaLocal">Horas de València.</p>
+        </section>
+
+        <section class="bloque" id="ubicacion" aria-labelledby="titulo-ubicacion">
+          <h2 class="titulo" id="titulo-ubicacion" data-t="tituloUbicacion">Ubicación</h2>
+          <address class="direccion" id="direccion"></address>
+          <p class="acceso">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="4" r="2"/><path d="M11 7v6h5l2.6 6 1.8-.8M11 10h4.5M8.4 10.8A5.5 5.5 0 1 0 15.6 18"/></svg>
+            <span data-d="accesibilidad">Acceso para silla de ruedas</span>
+          </p>
+          <div class="bloque-acciones">
+            <a class="boton boton-oscuro" id="como-llegar" href="#" data-t="comoLlegar">Cómo llegar</a>
+            <a class="enlace" href="https://maps.app.goo.gl/vfKrPSUcbeAMBxzp6" data-d="mapa" data-t="verMapa">Ver en Google Maps</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <span class="miga miga-5" data-profundidad="-0.16" aria-hidden="true"></span>
+      <div class="envoltorio">
+        <h2 class="titulo" id="titulo-contacto" data-t="tituloContacto">Contacto</h2>
+        <p class="contacto-intro" data-t="introContacto">Los pedidos se hacen por teléfono.</p>
+        <a class="telefono-grande" href="tel:+34632125481" data-d="tel">
+          <span class="solo-lectores" data-t="llamarAl">Llamar al</span>
+          <span data-d="telefono">632 12 54 81</span>
+        </a>
+        <h3 class="subtitulo" data-t="comoPedir">Cómo se puede pedir</h3>
+        <ul class="servicios" id="servicios"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltorio">
+      <p data-t="pie">La Papita de Leche Take Away</p>
+      <p id="pie-direccion"></p>
+    </div>
+  </footer>
+
+  <!-- Botón de llamar fijo abajo en el móvil. -->
+  <div class="llamada-fija">
+    <a class="boton boton-llamar" href="tel:+34632125481" data-d="tel">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.2 9 3l1.6 4.2-2 1.4a12 12 0 0 0 6.8 6.8l1.4-2 4.2 1.6-.2 2.4a2.6 2.6 0 0 1-2.8 2.3A17.5 17.5 0 0 1 4.3 6 2.6 2.6 0 0 1 6.6 3.2z"/></svg>
+      <span><span data-t="llamarAl">Llamar al</span> <span data-d="telefono">632 12 54 81</span></span>
+    </a>
+  </div>
+
+  <noscript><p class="sin-js">Para ver la carta y el horario, activa JavaScript. Pedidos: <a href="tel:+34632125481">632 12 54 81</a>.</p></noscript>
+
+  <script src="js/datos.js"></script>
+  <script src="js/textos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
